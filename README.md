@@ -1,21 +1,11 @@
-# Next.js + Tailwind CSS Example
+# Caleb Lovell's Next.js Starter Template
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) (v2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This example shows how to use Next.js with a number of extra technologies that I use on every project, seen here:
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+1. [TypeScript](https://www.npmjs.com/package/typescript)
+2. [Tailwind CSS](https://tailwindcss.com/)
+3. [React Query](https://www.npmjs.com/package/react-query)
+4. [React Toast Notifications](https://www.npmjs.com/package/react-toast-notifications)
+5. [Next Themes](https://www.npmjs.com/package/next-themes)
+6. [ESLint](https://www.npmjs.com/package/eslint)
+7. [Prettier](https://www.npmjs.com/package/prettier)

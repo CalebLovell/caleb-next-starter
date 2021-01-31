@@ -1,7 +1,9 @@
 {
-	"name": "with-tailwindcss",
-	"version": "0.1.0",
-	"private": true,
+	"name": "caleb-next-starter",
+	"description": "starter for projects with next.js, typescript, tailwindcss, and react query",
+	"author": "Caleb Lovell",
+	"version": "0.0.1",
+	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
