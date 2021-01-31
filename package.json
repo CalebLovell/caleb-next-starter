@@ -7,7 +7,11 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"pretty": "prettier src --write",
+		"linty": "eslint src --fix",
+		"ts": "tsc",
+		"clean": "yarn pretty && yarn linty && yarn ts"
 	},
 	"dependencies": {
 		"next": "latest",
