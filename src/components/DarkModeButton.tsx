@@ -1,16 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import { useTheme } from 'next-themes';
+import { useTranslation } from '../../i18n';
 
 export const DarkModeButton = (): JSX.Element => {
 	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
+	const { t } = useTranslation();
 
+	// Wait for theme to load
 	useEffect(() => setMounted(true), []);
 
 	return (
 		<button
-			name='Toggle Dark Mode'
-			aria-label='Toggle Dark Mode'
+			name='dark-mode-toggle'
+			aria-label={t(`darkMode`)}
 			type='button'
 			className='px-2 py-2 bg-gray-300 rounded-md'
 			onClick={() => setTheme(theme === `dark` ? `light` : `dark`)}
