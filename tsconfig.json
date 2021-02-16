@@ -13,7 +13,10 @@
 			],
 			"@hooks/*": [
 				"hooks/*"
-			]
+			],
+			"@utils/*": [
+				"utils/*"
+			],
 		},
 		"allowJs": true,
 		"alwaysStrict": true,
@@ -30,7 +33,7 @@
 		"noEmit": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitAny": false,
-		"noImplicitReturns": true,
+		"noImplicitReturns": false,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"resolveJsonModule": true,
@@ -44,6 +47,7 @@
 	],
 	"include": [
 		"**/*.ts",
-		"**/*.tsx"
-, "i18n.ts"	]
+		"**/*.tsx",
+		"i18n.ts"
+	]
 }

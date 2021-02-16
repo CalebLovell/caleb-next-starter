@@ -16,12 +16,12 @@ export const DarkModeButton = (): JSX.Element => {
 			name='dark-mode-toggle'
 			aria-label={t(`darkMode`)}
 			type='button'
-			className='px-2 py-2 bg-gray-300 rounded-md'
+			className='px-2 py-2 rounded-md focus-brand'
 			onClick={() => setTheme(theme === `dark` ? `light` : `dark`)}
 		>
-			{mounted ? (
+			{mounted && (
 				<svg
-					className='w-6 h-6 text-yellow-500 dark:text-blue-900'
+					className='w-6 h-6 text-brand-accent-light dark:text-brand-primary-light'
 					fill='none'
 					stroke='currentColor'
 					viewBox='0 0 24 24'
@@ -45,7 +45,7 @@ export const DarkModeButton = (): JSX.Element => {
 						/>
 					)}
 				</svg>
-			) : null}
+			)}
 		</button>
 	);
 };

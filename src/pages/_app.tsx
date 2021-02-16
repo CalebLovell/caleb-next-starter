@@ -3,6 +3,7 @@ import '../styles/global.css';
 import App, { AppContext } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import { GlobalProvider } from '@utils/GlobalProvider';
 import { ThemeProvider } from 'next-themes';
 import { ToastProvider } from 'react-toast-notifications';
 import { appWithTranslation } from '../../i18n';
@@ -13,9 +14,11 @@ const MyApp = ({ Component, pageProps }) => {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<ThemeProvider attribute='class'>
-				<ToastProvider>
-					<Component {...pageProps} />
-				</ToastProvider>
+				<GlobalProvider>
+					<ToastProvider>
+						<Component {...pageProps} />
+					</ToastProvider>
+				</GlobalProvider>
 			</ThemeProvider>
 		</QueryClientProvider>
 	);
