@@ -6,7 +6,7 @@ import { MobileMenuButton } from './MobileMenuButton';
 
 export const NavBar = (): JSX.Element => {
 	return (
-		<div className='container bg-white dark:bg-brand-primary-base h-14'>
+		<header className='container bg-white shadow dark:bg-brand-primary-base h-14'>
 			<div className='flex items-center justify-between h-full md:hidden'>
 				<MobileMenuButton />
 				<div className='flex items-center space-x-2'>
@@ -32,6 +32,6 @@ export const NavBar = (): JSX.Element => {
 					</div>
 				</div>
 			</nav>
-		</div>
+		</header>
 	);
 };
