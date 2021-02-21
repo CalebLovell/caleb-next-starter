@@ -16,6 +16,7 @@
 	"dependencies": {
 		"next": "latest",
 		"next-i18next": "^7.0.1",
+		"next-plausible": "^1.5.1",
 		"next-themes": "^0.0.10",
 		"react": "latest",
 		"react-dom": "^16.13.1",

@@ -9,3 +9,8 @@ This example shows how to use Next.js with a number of extra technologies that I
 5. [Next Themes](https://www.npmjs.com/package/next-themes)
 6. [ESLint](https://www.npmjs.com/package/eslint)
 7. [Prettier](https://www.npmjs.com/package/prettier)
+8. [Plausible Analytics](https://www.npmjs.com/package/next-plausible)
+
+## Getting Started
+
+Edit `src/components/Container.tsx` to include your site's configuration

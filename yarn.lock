@@ -2549,6 +2549,11 @@ next-i18next@^7.0.1:
     react-i18next "^11.7.3"
     url "^0.11.0"
 
+next-plausible@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-1.5.1.tgz#6628aed815c1657c98f662c51c166a17580a7498"
+  integrity sha512-9XSAQ9KiHwojEqsMvHyqFEH28GYa3VMS/0FAEOxK0BwclO40HBwcJN6G0Io2Jg7t+wxJm3Qe8YyB5XK6Fysfww==
+
 next-themes@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.0.10.tgz#86fe5f8a4654416f5d9157993217180174e582b8"
