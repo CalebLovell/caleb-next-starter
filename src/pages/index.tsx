@@ -26,21 +26,21 @@ const HomePage = ({ t }: { readonly t: TFunction }): JSX.Element => {
 						<button
 							type='button'
 							onClick={() => addToast(`Success!`, { appearance: `success` })}
-							className='inline-flex items-center px-4 py-2 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+							className='inline-flex items-center px-4 py-2 text-base font-medium text-green-700 bg-green-100 border border-transparent rounded-md hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
 						>
 							Success!
 						</button>
 						<button
 							type='button'
 							onClick={() => addToast(`Warning!`, { appearance: `warning` })}
-							className='inline-flex items-center px-4 py-2 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+							className='inline-flex items-center px-4 py-2 text-base font-medium text-yellow-700 bg-yellow-100 border border-transparent rounded-md hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500'
 						>
 							Warning!
 						</button>
 						<button
 							type='button'
 							onClick={() => addToast(`Error!`, { appearance: `error` })}
-							className='inline-flex items-center px-4 py-2 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+							className='inline-flex items-center px-4 py-2 text-base font-medium text-red-700 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
 						>
 							Error!
 						</button>
