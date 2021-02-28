@@ -1,10 +1,10 @@
 import { Container } from '@components/Container';
-import { TFunction } from 'next-i18next';
 import { useToasts } from 'react-toast-notifications';
-import { withTranslation } from '../../i18n';
+import { useTranslation } from '../../i18n';
 
-const HomePage = ({ t }: { readonly t: TFunction }): JSX.Element => {
+const HomePage = (): JSX.Element => {
 	const { addToast } = useToasts();
+	const { t } = useTranslation(`home`);
 	return (
 		<Container>
 			<main className='container flex items-center justify-center min-h-content bg-brand-primary-light dark:bg-brand-primary-dark'>
@@ -51,8 +51,4 @@ const HomePage = ({ t }: { readonly t: TFunction }): JSX.Element => {
 	);
 };
 
-HomePage.getInitialProps = async () => ({
-	namespacesRequired: [`home`],
-});
-
-export default withTranslation(`home`)(HomePage);
+export default HomePage;

@@ -6,7 +6,7 @@ import { useTranslation } from '../../i18n';
 export const DarkModeButton = (): JSX.Element => {
 	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
-	const { t } = useTranslation();
+	const { t } = useTranslation(`components`);
 
 	// Wait for theme to load
 	useEffect(() => setMounted(true), []);
@@ -14,7 +14,7 @@ export const DarkModeButton = (): JSX.Element => {
 	return (
 		<button
 			name='dark-mode-toggle'
-			aria-label={t(`darkMode`)}
+			aria-label={t(`DarkModeButton`)}
 			type='button'
 			className='p-2 rounded-md focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'
 			onClick={() => setTheme(theme === `dark` ? `light` : `dark`)}

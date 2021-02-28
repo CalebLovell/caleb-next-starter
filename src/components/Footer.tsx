@@ -1,4 +1,7 @@
+import { useTranslation } from '../../i18n';
+
 export const Footer = (): JSX.Element => {
+	const { t } = useTranslation(`components`);
 	return (
 		<footer className='bg-white dark:bg-brand-primary-base'>
 			<div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
@@ -54,7 +57,7 @@ export const Footer = (): JSX.Element => {
 						<span role='img' aria-label='copyright'>
 							©️
 						</span>
-						2021 Caleb Lovell. Thanks for visiting, hope you&apos;re having a lovely day.&nbsp;
+						{t(`footer.p`)}
 						<span role='img' aria-label='smiling-face-with-hearts'>
 							🥰
 						</span>

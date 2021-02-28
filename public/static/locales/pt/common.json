@@ -1,6 +1,5 @@
 {
 	"success": "Sucesso!",
 	"error": "Ocorreu um erro e foi registrado. Desculpe pela inconveniência. Por favor, tente novamente mais tarde!",
-	"404": "Página não encontrada!",
-	"darkMode": "Alternar modo escuro"
+	"404": "Página não encontrada!"
 }
