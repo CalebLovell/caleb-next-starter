@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const colors = require(`tailwindcss/colors`);
+
 module.exports = {
 	purge: [`./pages/**/*.{js,ts,jsx,tsx}`, `./components/**/*.{js,ts,jsx,tsx}`],
 	corePlugins: {
@@ -9,14 +12,14 @@ module.exports = {
 			colors: {
 				brand: {
 					primary: {
-						'light': `rgb(233,236,240)`,
-						'base': `rgb(39,39,44)`,
-						'dark': `rgb(33,33,37)`,
+						light: colors.gray[100],
+						base: `rgb(39,39,44)`,
+						dark: `rgb(33,33,37)`,
 					},
 					accent: {
-						'light': `rgb(246, 146, 30)`,
-						'base': `rgb(255, 87, 102)`,
-						'dark': `rgb(240, 0, 21)`,
+						light: colors.blue[400],
+						base: colors.blue[500],
+						dark: colors.blue[600],
 					},
 				},
 			},

@@ -21,8 +21,10 @@
 		"next-themes": "^0.0.10",
 		"react": "latest",
 		"react-dom": "^16.13.1",
+		"react-focus-lock": "^2.5.0",
 		"react-query": "latest",
-		"react-toast-notifications": "^2.4.0"
+		"react-toast-notifications": "^2.4.0",
+		"react-use-keypress": "^1.2.0"
 	},
 	"devDependencies": {
 		"@tailwindcss/forms": "^0.2.1",

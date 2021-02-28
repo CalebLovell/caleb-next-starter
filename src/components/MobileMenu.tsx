@@ -1,30 +1,46 @@
+import * as React from 'react';
+
+import FocusLock from 'react-focus-lock';
 import { Link } from '@components/Link';
 import { Logo } from '@components/Logo';
 import { MobileMenuButton } from '@components/MobileMenuButton';
+import { useGlobalDispatch } from './GlobalProvider';
+import useKeypress from 'react-use-keypress';
 
 export const MobileMenu: React.FC = () => {
+	const globalDispatch = useGlobalDispatch();
+
+	useKeypress([`Escape`], (event: KeyboardEvent) => {
+		if (event.key === `Escape`) globalDispatch({ type: `SET_MOBILE_NAV_OPEN`, payload: false });
+	});
+
 	return (
-		<div className='absolute inset-x-0 top-0 z-20 m-2 transition origin-top-right transform'>
-			<div className='bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 dark:divide-brand-primary-dark dark:bg-brand-primary-base'>
-				<div className='flex items-center justify-between p-2'>
-					<Logo />
-					<MobileMenuButton />
-				</div>
-				<nav className='flex flex-col items-start p-2 space-y-2'>
-					<Link href='/about' label='About' />
-					<Link href='/blog' label='Blog' />
-					<Link href='/contact' label='Contact' />
-				</nav>
-				<div className='flex flex-col p-2'>
-					<Link href='/' label='Sign up' type='button' />
-				</div>
-				<div className='flex items-center justify-center p-2'>
-					<p className='pr-2 font-medium text-center text-gray-500 dark:text-white'>Already have an account?</p>
-					<a href='/signin' className='text-base font-semibold text-brand-accent-base hover:text-brand-accent-light'>
-						Sign in
-					</a>
+		<FocusLock>
+			<div className='absolute inset-x-0 top-0 z-20 m-2 transition origin-top-right transform'>
+				<div className='bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 dark:divide-transparent dark:bg-brand-primary-base'>
+					<div className='flex items-center justify-between p-2'>
+						<Logo />
+						<MobileMenuButton />
+					</div>
+					<nav className='flex flex-col items-start p-2 space-y-2'>
+						<Link href='/about' label='About' style='w-full text-left' />
+						<Link href='/blog' label='Blog' style='w-full text-left' />
+						<Link href='/contact' label='Contact' style='w-full text-left' />
+					</nav>
+					<div className='flex flex-col p-2'>
+						<Link href='/signup' label='Sign up' type='button' />
+					</div>
+					<div className='flex items-center justify-center p-2'>
+						<p className='pr-2 font-medium text-center text-gray-500 dark:text-white'>Already have an account?</p>
+						<a
+							href='/signin'
+							className='p-1 text-base font-semibold rounded-md text-brand-accent-base hover:text-brand-accent-dark focus-brand'
+						>
+							Sign in
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		</FocusLock>
 	);
 };
