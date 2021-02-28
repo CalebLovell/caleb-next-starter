@@ -3,34 +3,6 @@ import * as React from 'react';
 import { Listbox } from '@headlessui/react';
 import { i18n } from '../../i18n';
 
-export const LanguageButtonX = (): JSX.Element => {
-	return (
-		<React.Fragment>
-			<label htmlFor='language-picker' className='block text-sm font-medium sr-only'>
-				Change Language
-			</label>
-			<select
-				id='language-picker'
-				name='language-picker'
-				defaultValue='en'
-				onChange={e => i18n.changeLanguage(e.target.value)}
-				onBlur={e => i18n.changeLanguage(e.target.value)}
-				className='block py-2 font-bold bg-white border-2 w-14 text-brand-accent-base focus-brand hover-brand dark:bg-brand-primary-base border-brand-accent-base sm:text-sm'
-			>
-				<option value='en' className='font-bold'>
-					EN
-				</option>
-				<option value='es' className='font-bold'>
-					ES
-				</option>
-				<option value='pt' className='font-bold'>
-					PT
-				</option>
-			</select>
-		</React.Fragment>
-	);
-};
-
 const languages = [
 	{ id: 1, name: `English`, locale: `en` },
 	{ id: 2, name: `Español`, locale: `es` },
@@ -38,16 +10,16 @@ const languages = [
 ];
 
 export const LanguageButton = (): JSX.Element => {
-	const [selectedLanguage, setSelectedLanguage] = React.useState(languages[0]);
+	const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.language);
 
 	React.useEffect(() => {
-		i18n.changeLanguage(selectedLanguage.locale);
-	}, [selectedLanguage.locale]);
+		i18n.changeLanguage(selectedLanguage);
+	}, [selectedLanguage]);
 
 	return (
 		<Listbox value={selectedLanguage} onChange={setSelectedLanguage} as='div' className='relative focus-brand'>
 			<Listbox.Button className='relative flex px-2 py-2 focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'>
-				<span className='mr-2 font-bold'>{selectedLanguage.locale.toUpperCase()}</span>
+				<span className='mr-2 font-medium'>{selectedLanguage?.toUpperCase()}</span>
 				<svg className='w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						fillRule='evenodd'
@@ -56,12 +28,12 @@ export const LanguageButton = (): JSX.Element => {
 					/>
 				</svg>
 			</Listbox.Button>
-			<Listbox.Options className='absolute bg-white dark:bg-brand-primary-base rounded-md right-0.5 top-12'>
+			<Listbox.Options className='py-1 origin-top-right absolute right-0.5 mt-2 w-32 rounded-md shadow-lg bg-white dark:bg-brand-primary-base ring-1 ring-black ring-opacity-5'>
 				{languages.map(language => (
-					<Listbox.Option key={language.id} value={language}>
+					<Listbox.Option key={language.id} value={language.locale}>
 						{({ active }) => (
 							<li
-								className={`px-2 py-1 cursor-default text-right font-bold text-brand-accent-base ${
+								className={`px-2 py-1 cursor-default text-right font-medium text-brand-accent-base ${
 									active ? `bg-brand-primary-light dark:bg-gray-700` : `bg-white dark:bg-brand-primary-base`
 								}`}
 							>
