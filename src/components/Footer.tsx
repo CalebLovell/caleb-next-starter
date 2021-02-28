@@ -54,7 +54,7 @@ export const Footer = (): JSX.Element => {
 						<span role='img' aria-label='copyright'>
 							©️
 						</span>
-						2021 Caleb Lovell, Thanks for visiting, hope you&apos;re having a lovely day.&nbsp;
+						2021 Caleb Lovell. Thanks for visiting, hope you&apos;re having a lovely day.&nbsp;
 						<span role='img' aria-label='smiling-face-with-hearts'>
 							🥰
 						</span>
