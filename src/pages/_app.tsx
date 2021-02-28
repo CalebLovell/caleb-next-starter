@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { GlobalProvider } from '@components/GlobalProvider';
 import { ThemeProvider } from 'next-themes';
+import { Toast } from '@components/Toast';
+import { ToastContainer } from '@components/ToastContainer';
 import { ToastProvider } from 'react-toast-notifications';
 import { appWithTranslation } from '../../i18n';
 
@@ -15,7 +17,13 @@ const MyApp = ({ Component, pageProps }) => {
 		<QueryClientProvider client={queryClient}>
 			<ThemeProvider attribute='class'>
 				<GlobalProvider>
-					<ToastProvider autoDismiss={true}>
+					<ToastProvider
+						components={{ Toast, ToastContainer }}
+						placement='bottom-center'
+						transitionDuration={100}
+						autoDismiss={true}
+						autoDismissTimeout={10000}
+					>
 						<Component {...pageProps} />
 					</ToastProvider>
 				</GlobalProvider>
