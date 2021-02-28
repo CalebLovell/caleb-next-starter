@@ -17,7 +17,7 @@ export const MobileMenu: React.FC = () => {
 	return (
 		<FocusLock>
 			<div className='absolute inset-x-0 top-0 z-20 m-2 transition origin-top-right transform'>
-				<div className='bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 dark:divide-transparent dark:bg-brand-primary-base'>
+				<div className='bg-white divide-y-2 rounded-lg shadow-lg min-height-mobile divide-gray-50 dark:divide-transparent dark:bg-brand-primary-base'>
 					<div className='flex items-center justify-between p-2'>
 						<Logo />
 						<MobileMenuButton />

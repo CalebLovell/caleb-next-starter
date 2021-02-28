@@ -16,6 +16,10 @@
 	--h-content-area: calc(100vh - theme('height.14'));
 }
 
+.min-height-mobile {
+	min-height: calc(100vh - theme('height.4'));
+}
+
 .focus-brand {
 	@apply focus:outline-none ring-black dark:ring-white focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-brand-primary-base;
 }
