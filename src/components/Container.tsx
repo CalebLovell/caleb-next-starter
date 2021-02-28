@@ -1,8 +1,9 @@
+import { Footer } from '@components/Footer';
 import Head from 'next/head';
-import { Header } from './Header';
-import { MobileMenu } from './MobileMenu';
+import { Header } from '@components/Header';
+import { MobileMenu } from '@components/MobileMenu';
 import PlausibleProvider from 'next-plausible';
-import { useGlobalState } from './GlobalProvider';
+import { useGlobalState } from '@components/GlobalProvider';
 
 interface Props {
 	title?: string;
@@ -55,6 +56,7 @@ export const Container: React.FC<Props> = ({
 			<Header />
 			{mobileNavOpen ? <MobileMenu /> : null}
 			{children}
+			<Footer />
 		</>
 	);
 };
