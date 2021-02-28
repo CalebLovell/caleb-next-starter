@@ -1,6 +1,10 @@
 import Link from 'next/link';
 
-export const Logo = (): JSX.Element => {
+interface Props {
+	label: string;
+}
+
+export const Logo = ({ label }: Props): JSX.Element => {
 	return (
 		<Link href='/'>
 			<a
@@ -14,7 +18,7 @@ export const Logo = (): JSX.Element => {
 						clipRule='evenodd'
 					/>
 				</svg>
-				<span className='ml-2'>Next Starter</span>
+				<span className='ml-2'>{label}</span>
 			</a>
 		</Link>
 	);

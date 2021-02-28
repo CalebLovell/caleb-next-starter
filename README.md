@@ -14,3 +14,5 @@ This example shows how to use Next.js with a number of extra technologies that I
 ## Getting Started
 
 Edit `src/components/Container.tsx` to include your site's configuration
+
+### This is a WIP

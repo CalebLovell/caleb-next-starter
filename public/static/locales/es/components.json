@@ -1,6 +1,14 @@
 {
 	"darkModeButton": "Alternar el modo oscuro",
+	"header": {
+		"home": "Next Sitio de Iniciación",
+		"about": "Acerca del Sitio",
+		"blog": "Blog",
+		"contact": "Contacto",
+		"signin": "Registrarse",
+		"signup": "Inscribirse"
+	},
 	"footer": {
-		"p": "2021 Caleb Lovell. Gracias por visitar, espero que estés teniendo un buen día."
+		"p": "2021 Caleb Lovell. Gracias por visitar, espero que esté teniendo un buen día."
 	}
 }
