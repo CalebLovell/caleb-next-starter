@@ -17,9 +17,13 @@
 }
 
 .focus-brand {
-	@apply rounded-md focus:outline-none ring-black dark:ring-white focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-brand-primary-base;
+	@apply focus:outline-none ring-black dark:ring-white focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-brand-primary-base;
 }
 
 .hover-brand {
 	@apply hover:bg-brand-accent-base hover:text-white dark:hover:bg-white dark:hover:text-brand-accent-base;
+}
+
+.hover-brand-inverse {
+	@apply hover:bg-brand-accent-light hover:text-white border-brand-accent-base dark:hover:bg-white dark:hover:text-brand-accent-base;
 }

@@ -32,7 +32,7 @@ const GlobalProvider: React.FC = ({ children }) => {
 	);
 };
 
-const useGlobalState = () => {
+const useGlobalState = (): State => {
 	const context = React.useContext(GlobalStateContext);
 	if (context === undefined) {
 		throw new Error(`useGlobalState must be used within a GlobalProvider`);
@@ -40,7 +40,7 @@ const useGlobalState = () => {
 	return context;
 };
 
-const useGlobalDispatch = () => {
+const useGlobalDispatch = (): Dispatch => {
 	const context = React.useContext(GlobalDispatchContext);
 	if (context === undefined) {
 		throw new Error(`useGlobalDispatch must be used within a GlobalProvider`);

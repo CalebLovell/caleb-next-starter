@@ -17,8 +17,8 @@ export const LanguageButton = (): JSX.Element => {
 	}, [selectedLanguage]);
 
 	return (
-		<Listbox value={selectedLanguage} onChange={setSelectedLanguage} as='div' className='relative focus-brand'>
-			<Listbox.Button className='relative flex px-2 py-2 focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'>
+		<Listbox value={selectedLanguage} onChange={setSelectedLanguage} as='div' className='relative rounded-md focus-brand'>
+			<Listbox.Button className='relative flex p-2 rounded-md focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'>
 				<span className='mr-2 font-medium'>{selectedLanguage?.toUpperCase()}</span>
 				<svg className='w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
 					<path
@@ -28,7 +28,7 @@ export const LanguageButton = (): JSX.Element => {
 					/>
 				</svg>
 			</Listbox.Button>
-			<Listbox.Options className='py-1 origin-top-right absolute right-0.5 mt-2 w-32 rounded-md shadow-lg bg-white dark:bg-brand-primary-base ring-1 ring-black ring-opacity-5'>
+			<Listbox.Options className='py-1 origin-top-right absolute right-0.5 mt-2 w-32 rounded-md shadow-lg bg-white dark:bg-brand-primary-base ring-2 ring-black ring-opacity-5'>
 				{languages.map(language => (
 					<Listbox.Option key={language.id} value={language.locale}>
 						{({ active }) => (

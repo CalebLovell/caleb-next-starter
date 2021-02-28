@@ -1,14 +1,16 @@
 import Head from 'next/head';
-import { NavBar } from './NarBar';
+import { Header } from './Header';
+import { MobileMenu } from './MobileMenu';
 import PlausibleProvider from 'next-plausible';
+import { useGlobalState } from './GlobalProvider';
 
-type Props = {
+interface Props {
 	title?: string;
 	description?: string;
 	domain?: string;
 	url?: string;
 	image?: string;
-};
+}
 
 export const Container: React.FC<Props> = ({
 	title = `Caleb Next Starter`,
@@ -18,6 +20,7 @@ export const Container: React.FC<Props> = ({
 	image = ``,
 	children,
 }) => {
+	const { mobileNavOpen } = useGlobalState();
 	return (
 		<>
 			<PlausibleProvider domain={domain}>
@@ -49,7 +52,8 @@ export const Container: React.FC<Props> = ({
 					<meta name='twitter:image:alt' content={description} key='twimagealt' />
 				</Head>
 			</PlausibleProvider>
-			<NavBar />
+			<Header />
+			{mobileNavOpen ? <MobileMenu /> : null}
 			{children}
 		</>
 	);

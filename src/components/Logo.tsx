@@ -5,7 +5,7 @@ export const Logo = (): JSX.Element => {
 		<Link href='/'>
 			<a
 				href='/'
-				className='flex items-center px-2 py-2 font-medium transition duration-150 ease-in-out lg:px-4 focus-brand hover-brand text-brand-accent-base hover:text-brand-accent-dark brand-ring'
+				className='flex items-center p-2 font-medium transition duration-150 ease-in-out rounded-md lg:px-4 focus-brand hover-brand text-brand-accent-base hover:text-brand-accent-dark brand-ring'
 			>
 				<svg className='inline w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
 					<path

@@ -16,7 +16,7 @@ export const DarkModeButton = (): JSX.Element => {
 			name='dark-mode-toggle'
 			aria-label={t(`darkMode`)}
 			type='button'
-			className='px-2 py-2 focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'
+			className='p-2 rounded-md focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'
 			onClick={() => setTheme(theme === `dark` ? `light` : `dark`)}
 		>
 			{mounted && (
