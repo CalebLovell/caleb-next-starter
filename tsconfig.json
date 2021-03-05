@@ -5,9 +5,6 @@
 			"@components/*": [
 				"components/*"
 			],
-			"@api/*": [
-				"api/*"
-			],
 			"@types/*": [
 				"types/*"
 			],
