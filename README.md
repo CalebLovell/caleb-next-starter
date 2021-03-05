@@ -10,6 +10,7 @@ This example shows how to use Next.js with a number of extra technologies that I
 6. [ESLint](https://www.npmjs.com/package/eslint)
 7. [Prettier](https://www.npmjs.com/package/prettier)
 8. [Plausible Analytics](https://www.npmjs.com/package/next-plausible)
+9. [Next i18n Next](https://www.npmjs.com/package/next-i18next)
 
 ## Getting Started
 
