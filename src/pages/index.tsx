@@ -22,7 +22,7 @@ const HomePage = (): JSX.Element => {
 							{t(`h2`)}
 						</a>
 					</h2>
-					<div className='flex flex-col justify-around space-y-2 sm:flex-row'>
+					<div className='flex flex-col justify-around space-y-2 sm:space-y-0 sm:flex-row'>
 						<button
 							type='button'
 							onClick={() => addToast(toasts(`info`), { appearance: `info` })}
