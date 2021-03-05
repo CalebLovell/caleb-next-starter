@@ -3,7 +3,7 @@
 	"trailingSlash": false,
 	"headers": [
 		{
-			"source": "/fonts/Inter-VariableFont_slnt,wght.ttf",
+			"source": "/fonts/inter-var.ttf",
 			"headers": [
 				{
 					"key": "Cache-Control",
