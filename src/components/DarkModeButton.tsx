@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import * as React from 'react';
 
 import { useTheme } from 'next-themes';
 import { useTranslation } from '../../i18n';
 
 export const DarkModeButton = (): JSX.Element => {
-	const [mounted, setMounted] = useState(false);
+	const [mounted, setMounted] = React.useState(false);
 	const { theme, setTheme } = useTheme();
 	const { t } = useTranslation(`components`);
 
 	// Wait for theme to load
-	useEffect(() => setMounted(true), []);
+	React.useEffect(() => setMounted(true), []);
 
 	return (
 		<button
@@ -20,13 +20,7 @@ export const DarkModeButton = (): JSX.Element => {
 			onClick={() => setTheme(theme === `dark` ? `light` : `dark`)}
 		>
 			{mounted && (
-				<svg
-					className='w-6 h-6'
-					fill='none'
-					stroke='currentColor'
-					viewBox='0 0 24 24'
-					xmlns='http://www.w3.org/2000/svg'
-				>
+				<svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
 					{theme === `dark` ? (
 						// Moon Icon
 						<path
