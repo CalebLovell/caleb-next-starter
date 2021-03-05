@@ -19,9 +19,9 @@ export const Header = (): JSX.Element => {
 			<nav className='items-center justify-between hidden h-full md:flex'>
 				<div className='flex items-center md:space-x-2'>
 					<Logo label={t(`header.home`)} />
-					<Link href='/about' label={t(`header.about`)} />
-					<Link href='/blog' label={t(`header.blog`)} />
-					<Link href='/contact' label={t(`header.contact`)} />
+					<Link href='/about' label={t(`header.about`)} variant='link' />
+					<Link href='/blog' label={t(`header.blog`)} variant='link' />
+					<Link href='/contact' label={t(`header.contact`)} variant='link' />
 				</div>
 				<div className='flex items-center md:space-x-2 xl:space-x-10'>
 					<div className='flex items-center space-x-2'>
@@ -29,8 +29,8 @@ export const Header = (): JSX.Element => {
 						<DarkModeButton />
 					</div>
 					<div className='flex items-center md:space-x-2'>
-						<Link href='/signin' label={t(`header.signin`)} />
-						<Link href='/signup' label={t(`header.signup`)} type='button' />
+						<Link href='/signin' label={t(`header.signin`)} variant='link' />
+						<Link href='/signup' label={t(`header.signup`)} variant='button' />
 					</div>
 				</div>
 			</nav>
