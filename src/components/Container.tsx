@@ -16,9 +16,9 @@ interface Props {
 export const Container: React.FC<Props> = ({
 	title = `Caleb Next Starter`,
 	description = `Caleb Next Starter`,
-	domain = ``,
-	url,
-	image = ``,
+	domain = `caleb-next-starter.vercel.app`,
+	url = `https://caleb-next-starter.vercel.app`,
+	image = `./images/caleb-next-starter.png`,
 	children,
 }) => {
 	const { mobileNavOpen } = useGlobalState();
@@ -35,9 +35,9 @@ export const Container: React.FC<Props> = ({
 					<link rel='icon' type='image/png' sizes='32x32' href='/favicons/favicon-32x32.png' />
 					<link rel='icon' type='image/png' sizes='16x16' href='/favicons/favicon-16x16.png' />
 					<link rel='manifest' href='/favicons/site.webmanifest' />
-					<link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
-					<meta name='msapplication-TileColor' content='#22b8fb' />
-					<meta name='theme-color' content='#fff' />
+					<link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#3b82f6' />
+					<meta name='msapplication-TileColor' content='#3b82f6' />
+					<meta name='theme-color' content='#ffffff' />
 					<meta property='og:image' content={image} key='ogimage' />
 					<meta property='og:image:width' content='1200' key='ogimagewidth' />
 					<meta property='og:image:height' content='630' key='ogimageheight' />
