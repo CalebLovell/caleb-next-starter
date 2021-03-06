@@ -10,8 +10,8 @@ const HomePage = (): JSX.Element => {
 	return (
 		<Container>
 			<main className='container flex items-center justify-center min-h-content bg-brand-primary-light dark:bg-brand-primary-dark'>
-				<div className='flex flex-col space-y-20 text-center'>
-					<h1 className='text-3xl text-black dark:text-brand-primary-light'>{t(`h1`)}</h1>
+				<div className='flex flex-col space-y-6 text-center sm:space-y-20'>
+					<h1 className='mt-2 text-3xl text-black dark:text-brand-primary-light'>{t(`h1`)}</h1>
 					<h2 className='text-lg text-black dark:text-brand-primary-light'>
 						<a
 							className='rounded-md focus-brand hover:text-brand-accent-base'
