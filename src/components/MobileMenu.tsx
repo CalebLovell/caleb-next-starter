@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 export const MobileMenu = () => {
 	const globalDispatch = useGlobalDispatch();
-	const { t } = useTranslation(`components`);
+	const { t } = useTranslation(`common`);
 
 	useKeypress([`Escape`], (event: KeyboardEvent) => {
 		if (event.key === `Escape`) globalDispatch({ type: `SET_MOBILE_NAV_OPEN`, payload: false });

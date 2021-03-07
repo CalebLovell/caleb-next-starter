@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
-	const { t } = useTranslation(`components`);
+	const { t } = useTranslation(`common`);
 	return (
 		<footer className='bg-white dark:bg-brand-primary-base'>
 			<div className='px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>

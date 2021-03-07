@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'react-i18next';
 
 export const getStaticProps = async ({ locale }) => {
-	const translations = await serverSideTranslations(locale, [`components`]);
+	const translations = await serverSideTranslations(locale, [`common`]);
 	return {
 		props: {
 			...translations,
@@ -12,7 +12,7 @@ export const getStaticProps = async ({ locale }) => {
 };
 
 const ContactPage = () => {
-	const { t } = useTranslation(`components`);
+	const { t } = useTranslation(`common`);
 	return (
 		<Container>
 			<main className='container flex items-center justify-center min-h-content bg-brand-primary-light dark:bg-brand-primary-dark'>

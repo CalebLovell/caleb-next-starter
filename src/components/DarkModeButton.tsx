@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 export const DarkModeButton = () => {
 	const [mounted, setMounted] = React.useState(false);
 	const { theme, setTheme } = useTheme();
-	const { t } = useTranslation(`components`);
+	const { t } = useTranslation(`common`);
 
 	// Wait for theme to load
 	React.useEffect(() => setMounted(true), []);
