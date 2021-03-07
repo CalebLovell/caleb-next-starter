@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Listbox } from '@headlessui/react';
-import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
 
 const languages = [
 	{ id: 1, name: `English`, locale: `en` },
@@ -10,17 +10,16 @@ const languages = [
 ];
 
 export const LanguageButton = () => {
-	const { i18n } = useTranslation();
-	const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.language);
+	const router = useRouter();
 
-	React.useEffect(() => {
-		i18n.changeLanguage(selectedLanguage);
-	}, [i18n, selectedLanguage]);
+	const onChange = lang => {
+		router.push(router.pathname, router.pathname, { locale: lang });
+	};
 
 	return (
-		<Listbox value={selectedLanguage} onChange={setSelectedLanguage} as='div' className='relative rounded-md focus-brand'>
+		<Listbox value={router.locale} onChange={lang => onChange(lang)} as='div' className='relative rounded-md focus-brand'>
 			<Listbox.Button className='relative flex p-2 rounded-md focus-brand hover-brand text-brand-accent-base hover:text-white hover:dark:text-brand-accent-base'>
-				<span className='mr-2 font-medium'>{selectedLanguage?.toUpperCase()}</span>
+				<span className='mr-2 font-medium'>{router?.locale?.toUpperCase()}</span>
 				<svg className='w-6 h-6' fill='currentColor' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						fillRule='evenodd'
@@ -33,13 +32,13 @@ export const LanguageButton = () => {
 				{languages.map(language => (
 					<Listbox.Option key={language.id} value={language.locale}>
 						{({ active }) => (
-							<li
+							<div
 								className={`px-2 py-1 cursor-default text-right font-medium text-brand-accent-base ${
 									active ? `bg-brand-primary-light dark:bg-gray-700` : `bg-white dark:bg-brand-primary-base`
 								}`}
 							>
 								{language.name}
-							</li>
+							</div>
 						)}
 					</Listbox.Option>
 				))}
