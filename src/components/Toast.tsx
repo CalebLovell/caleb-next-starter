@@ -1,7 +1,7 @@
 import { ToastProps } from 'react-toast-notifications';
 import { Transition } from '@headlessui/react';
 
-export const Toast: React.FC<ToastProps> = ({ appearance, onDismiss, children }): JSX.Element => {
+export const Toast: React.FC<ToastProps> = ({ appearance, onDismiss, children }) => {
 	return (
 		<Transition
 			show={true}

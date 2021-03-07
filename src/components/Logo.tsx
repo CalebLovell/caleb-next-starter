@@ -4,7 +4,7 @@ interface Props {
 	label: string;
 }
 
-export const Logo = ({ label }: Props): JSX.Element => {
+export const Logo = ({ label }: Props) => {
 	return (
 		<Link href='/'>
 			<a

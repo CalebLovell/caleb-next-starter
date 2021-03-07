@@ -1,21 +1,21 @@
 import '../styles/global.css';
 
-import App, { AppContext } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import { AppProps } from 'next/app';
 import { GlobalProvider } from '@components/GlobalProvider';
 import { ThemeProvider } from 'next-themes';
 import { Toast } from '@components/Toast';
 import { ToastContainer } from '@components/ToastContainer';
 import { ToastProvider } from 'react-toast-notifications';
-import { appWithTranslation } from '../../i18n';
+import { appWithTranslation } from 'next-i18next';
 
 const queryClient = new QueryClient();
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (
-		<QueryClientProvider client={queryClient}>
-			<ThemeProvider attribute='class'>
+		<ThemeProvider attribute='class'>
+			<QueryClientProvider client={queryClient}>
 				<GlobalProvider>
 					<ToastProvider
 						components={{ Toast, ToastContainer }}
@@ -27,14 +27,9 @@ const MyApp = ({ Component, pageProps }) => {
 						<Component {...pageProps} />
 					</ToastProvider>
 				</GlobalProvider>
-			</ThemeProvider>
-		</QueryClientProvider>
+			</QueryClientProvider>
+		</ThemeProvider>
 	);
-};
-
-MyApp.getInitialProps = async (appContext: AppContext) => {
-	const appProps = await App.getInitialProps(appContext);
-	return { ...appProps };
 };
 
 export default appWithTranslation(MyApp);

@@ -26,8 +26,8 @@ module.exports = {
 		React: `writable`,
 	},
 	rules: {
-		'react/react-in-jsx-scope': `off`,
 		'@typescript-eslint/explicit-module-boundary-types': `off`,
+		'react/react-in-jsx-scope': `off`,
 		'array-bracket-spacing': [`error`, `never`],
 		'block-spacing': `error`,
 		'brace-style': [`error`, `1tbs`, { allowSingleLine: true }],
@@ -71,12 +71,4 @@ module.exports = {
 		'template-curly-spacing': `error`,
 		yoda: `error`,
 	},
-	overrides: [
-		{
-			files: [`*.ts`, `*.tsx`],
-			rules: {
-				'@typescript-eslint/explicit-module-boundary-types': [`error`],
-			},
-		},
-	],
 };

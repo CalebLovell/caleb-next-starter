@@ -3,9 +3,9 @@ import { LanguageButton } from './LanguageButton';
 import { Link } from './Link';
 import { Logo } from './Logo';
 import { MobileMenuButton } from './MobileMenuButton';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
-export const Header = (): JSX.Element => {
+export const Header = () => {
 	const { t } = useTranslation(`components`);
 	return (
 		<header className='container bg-white shadow dark:bg-brand-primary-base h-14'>

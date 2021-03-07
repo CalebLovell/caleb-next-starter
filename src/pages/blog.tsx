@@ -1,7 +1,17 @@
 import { Container } from '@components/Container';
-import { useTranslation } from '../../i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'react-i18next';
 
-const BlogPage = (): JSX.Element => {
+export const getStaticProps = async ({ locale }) => {
+	const translations = await serverSideTranslations(locale, [`components`]);
+	return {
+		props: {
+			...translations,
+		},
+	};
+};
+
+const BlogPage = () => {
 	const { t } = useTranslation(`components`);
 	return (
 		<Container>

@@ -1,6 +1,6 @@
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
-export const Footer = (): JSX.Element => {
+export const Footer = () => {
 	const { t } = useTranslation(`components`);
 	return (
 		<footer className='bg-white dark:bg-brand-primary-base'>

@@ -7,7 +7,7 @@ interface Props {
 	style?: string;
 }
 
-export const Link = ({ href, label, variant }: Props): JSX.Element => {
+export const Link = ({ href, label, variant }: Props) => {
 	const getClassName = () => {
 		switch (variant) {
 			case `link`:

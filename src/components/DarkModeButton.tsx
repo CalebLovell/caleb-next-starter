@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 import { useTheme } from 'next-themes';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
-export const DarkModeButton = (): JSX.Element => {
+export const DarkModeButton = () => {
 	const [mounted, setMounted] = React.useState(false);
 	const { theme, setTheme } = useTheme();
 	const { t } = useTranslation(`components`);

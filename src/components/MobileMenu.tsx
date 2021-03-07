@@ -6,9 +6,9 @@ import { Logo } from '@components/Logo';
 import { MobileMenuButton } from '@components/MobileMenuButton';
 import { useGlobalDispatch } from './GlobalProvider';
 import useKeypress from 'react-use-keypress';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
-export const MobileMenu = (): JSX.Element => {
+export const MobileMenu = () => {
 	const globalDispatch = useGlobalDispatch();
 	const { t } = useTranslation(`components`);
 

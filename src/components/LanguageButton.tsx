@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Listbox } from '@headlessui/react';
-import { i18n } from '../../i18n';
+import { i18n } from '../../next-i18next.config';
 
 const languages = [
 	{ id: 1, name: `English`, locale: `en` },
@@ -9,7 +9,7 @@ const languages = [
 	{ id: 3, name: `Português`, locale: `pt` },
 ];
 
-export const LanguageButton = (): JSX.Element => {
+export const LanguageButton = () => {
 	const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.language);
 
 	React.useEffect(() => {

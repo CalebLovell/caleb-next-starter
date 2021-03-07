@@ -1,6 +1,6 @@
 import { useGlobalDispatch, useGlobalState } from '@components/GlobalProvider';
 
-export const MobileMenuButton = (): JSX.Element => {
+export const MobileMenuButton = () => {
 	const { mobileNavOpen } = useGlobalState();
 	const globalDispatch = useGlobalDispatch();
 	return (

@@ -1,8 +1,18 @@
 import { Container } from '@components/Container';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useToasts } from 'react-toast-notifications';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 
-const HomePage = (): JSX.Element => {
+export const getStaticProps = async ({ locale }) => {
+	const translations = await serverSideTranslations(locale, [`home, toasts`]);
+	return {
+		props: {
+			...translations,
+		},
+	};
+};
+
+const HomePage = () => {
 	const { addToast } = useToasts();
 	const { t } = useTranslation(`home`);
 	const { t: toasts } = useTranslation(`toasts`);
