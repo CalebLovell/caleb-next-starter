@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Listbox } from '@headlessui/react';
-import { i18n } from '../../next-i18next.config';
+import { useTranslation } from 'react-i18next';
 
 const languages = [
 	{ id: 1, name: `English`, locale: `en` },
@@ -10,11 +10,12 @@ const languages = [
 ];
 
 export const LanguageButton = () => {
+	const { i18n } = useTranslation();
 	const [selectedLanguage, setSelectedLanguage] = React.useState(i18n.language);
 
 	React.useEffect(() => {
 		i18n.changeLanguage(selectedLanguage);
-	}, [selectedLanguage]);
+	}, [i18n, selectedLanguage]);
 
 	return (
 		<Listbox value={selectedLanguage} onChange={setSelectedLanguage} as='div' className='relative rounded-md focus-brand'>
