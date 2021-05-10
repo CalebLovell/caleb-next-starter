@@ -59,7 +59,7 @@ export const Footer = () => {
 						</span>
 						{t(`footer.p`)}
 						<span role='img' aria-label='smiling-face-with-hearts'>
-							🥰
+							{` `}🥰
 						</span>
 					</p>
 				</div>
